@@ -678,6 +678,18 @@
       ]
     },
     {
+      "title": "XDCR Number of total replications decrease alert",
+      "_base": "panel",
+      "_targets": [
+        {
+          "datasource": "{data-source-name}",
+          "expr": "count(xdcr_number_of_replications_total < xdcr_number_of_replications_total offset 1m)",
+          "legendFormat": "{data-source-name} {{targetClusterUUID}} number of total replications per remote cluster}",
+          "_base": "target"
+        }
+      ]
+    },
+    {
       "title": "goxdcr resident mem size per running replication",
       "_base": "panel",
       "_targets": [
